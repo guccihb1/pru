@@ -1,0 +1,56 @@
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip(), $('[data-toggle="popover"]').popover(), $("#tabledate").DataTable({
+        dom: '<"card-body"lf>t<"card-footer"p><"clear">',
+        language: {
+            url: "json/spanish.json"
+        }
+    });
+});
+var greet = function(a, e) {
+    if ("Pausado" != (e = $(a).attr("date-q")) && "Termino" != e) var t = setInterval(function() {
+        e--, $(a).text(e + " Min"), e < 0 && ($(a).text("Termino"), clearInterval(t))
+    }, 6e4)
+};
+var kevalert = function(a) {
+    var e = $(".alertarea div").length;
+    0 == e && $("body").append('<div class="alertarea"></div>');
+    var t = "";
+    t += '<div class="alert alert-warning alert-dismissible animated bounceIn show alertn-' + e + '">', t += '<strong><i class="fas fa-bell"></i></strong>', t += a, t += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>', $(".alertarea").append(t), setTimeout(function() {
+        $(".alertn-" + e).fadeOut("slow").remove()
+    }, 1e4)
+};
+$(document).on('submit','form.formajax',function(){
+        var at= "../ajax/m"+$(this).attr('action');
+        $.post( at, $( this ).serialize(),  function( data ) {
+            swal("AgenciaChanel", data[1], data[0]).then((value) => {
+                if (data[2]=="reload") {
+                    window.location=window.location.href;
+                }
+            });
+        });
+        $(this)[0].reset();
+        return false;
+});
+function get_messages_chat (contenedor) {
+        var total_height=0;
+        $.get("ajax/mchat_messages.php", function(data, status){
+            $(contenedor).empty();
+            $.each(data, function(i, item) {
+                var avataruser='https://www.habbo.es/habbo-imaging/avatarimage?hb=image&user='+item.usuario+'&direction=3&head_direction=3&gesture=&size=l';
+                $( contenedor )
+                .append( '<div class="d-flex shadow"><div class="overflow-hidden bg-dark rounded me-2" style="height:80px; width: 80px"><img src="'+avataruser+'" style="margin-top: -45px;margin-left: -25px;"></div><div><h5 class="mt-0">'+item.usuario+' <small class="float-end text-muted">Hace '+item.date+'</small></h5><p>'+escapeHtml(item.msg)+'</p></div></div>' ).ready(function(){
+                    total_height=$(this).outerHeight();
+                });
+            });
+        });
+    }
+    function escapeHtml(text) {
+        var map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+    }

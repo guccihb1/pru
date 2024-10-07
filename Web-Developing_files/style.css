@@ -1,0 +1,12 @@
+
+.discord-widget{
+  position: fixed;
+  left: 0px;
+  bottom: 20px;
+  transition: 500ms;
+}
+.discord-widget:hover{
+  left: 30px;
+  bottom: 30px;
+  transition: 500ms;
+}

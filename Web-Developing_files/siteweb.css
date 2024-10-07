@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #212121;
+    background-attachment: fixed;
+  }
+  footer {
+    background-color: #f5f5f5;
+  }
+  .header {
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+  
+  .btn-outline-celeste {
+    color: #4fade0;
+    border-color: #4fade0;
+  }
+  .btn-outline-celeste:hover {
+    color: #fff;
+    background-color: #4fade0;
+    border-color: #4fade0;
+  }
+  .btn-check:focus + .btn-outline-celeste,
+  .btn-outline-celeste:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
+  }
+  .btn-check:active + .btn-outline-celeste,
+  .btn-check:checked + .btn-outline-celeste,
+  .btn-outline-celeste.active,
+  .btn-outline-celeste.dropdown-toggle.show,
+  .btn-outline-celeste:active {
+    color: #fff;
+    background-color: #4fade0;
+    border-color: #4fade0;
+  }
+  .btn-check:active + .btn-outline-celeste:focus,
+  .btn-check:checked + .btn-outline-celeste:focus,
+  .btn-outline-celeste.active:focus,
+  .btn-outline-celeste.dropdown-toggle.show:focus,
+  .btn-outline-celeste:active:focus {
+    box-shadow: 0 0 0 0.25rem #2b3e4980;
+  }
+  .btn-outline-celeste.disabled,
+  .btn-outline-celeste:disabled {
+    color: #4fade0;
+    background-color: transparent;
+  }
+  
+  .header .logo {
+  }
+  .card {
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+  }
+  .perfilimage {
+    height: 100px;
+    width: 100px;
+    background-position: -10px -40px;
+  }
+  .nav-item .dropdown-menu {
+    border: 0;
+  }
+  .nav-item .dropdown-menu {
+    margin-top: 8px;
+    background: #fff;
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.75);
+  }
+  .listmemberbox {
+    width: 100%;
+    background: #fff;
+    float: left;
+    margin-right: 1.1%;
+    position: relative;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .listmemberbox .avatar {
+    width: 64px;
+    height: 64px;
+    background-position: -30px -60px;
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  .icon-rotate {
+    transition: transform 1s ease-in-out;
+    display: inline-block;
+  }
+  @media (min-width: 576px) {
+    .news.card-columns {
+      column-count: 1;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .news.card-columns {
+      column-count: 2;
+    }
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #343a40;
+  }
+  .lined .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+  }
+  
+  .lined .nav-link:hover {
+    border: none;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .lined .nav-link.active {
+    background: none;
+    color: #555;
+    border-color: #2b90d9;
+  }
+  .list-group-item {
+    background: none;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .form-control:focus {
+    border-color: #727272;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 8px rgba(255, 0, 0, 0);
+  }
+  .chatbox {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .chatboxmessage {
+    height: 500px;
+    overflow: auto;
+  }
+  .chatboxmessage::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Estilos barra (thumb) de scroll */
+  .chatboxmessage::-webkit-scrollbar-thumb {
+    background: #17a2b8;
+    border-radius: 4px;
+  }
+  
+  .chatboxmessage::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  .chatboxmessage::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos track de scroll */
+  .chatboxmessage::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+  .chatboxmessage::-webkit-scrollbar-track:hover,
+  .chatboxmessage::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+  
+  .reproductor .lay-cont {
+    font-size: 14px;
+    display: flex;
+  }
+  .reproductor .lay-cont div:nth-child(2) {
+    flex: auto;
+    text-align: left;
+  }
+  .reproductor .lay-cont .avatar {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(../images/usaflag.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation-name: shadow-usa;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .reproductor .lay-cont .broad-info div {
+    box-sizing: border-box;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+  }
+  .reproductor marquee {
+    font-size: 12px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 2px;
+  }
+  @keyframes shadow-usa {
+    0% {
+      box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 0.75);
+    }
+    50% {
+      box-shadow: 0px 0px 13px 0px rgba(51, 172, 255, 0.75);
+    }
+    100% {
+      box-shadow: 0px 0px 13px 0px rgba(255, 79, 51, 0.75);
+    }
+  }
+  

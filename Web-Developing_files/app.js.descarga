@@ -1,0 +1,23 @@
+new Glider(document.querySelector(".glider"),{
+
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    draggable: true,
+    arrows:{
+        prev: '.glider-prev',
+        next: '.glider-next'
+    }
+
+})
+
+new Glider(document.querySelector(".glidi"),{
+
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    draggable: true,
+    arrows:{
+        prev: '.glipre',
+        next: '.gline'
+    }
+
+})
